@@ -1,5 +1,4 @@
 Flask
 flask-mysql
 MySQL
-ConfigParser 
-config
+
