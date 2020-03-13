@@ -1,3 +1,1 @@
-# ignore ENV files
 app/.env
-db/db.env
