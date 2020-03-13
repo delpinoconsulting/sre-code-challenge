@@ -1,17 +1,31 @@
-version: "2"
+version: "2.4"
 services:
   app:
     build: ./app
-    links:
-      - db
+    container_name: app
+    networks:
+      - default
     ports:
       - "5000:5000"
 
   db:
     image: mysql:5.7
-    container_name: sre-code-challenge_db_1
+    container_name: mysql
+    networks:
+      default:
+        aliases:
+          - mysql
+          - database
     env_file: ./db/db.env
+
+    expose:
+      - "3306"
+
     ports:
-      - "32000:3306"
+      - "3306:3306"
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:rw
+      - ./db/my.cnf:/etc/my.cnf
+
+networks:
+  default:
