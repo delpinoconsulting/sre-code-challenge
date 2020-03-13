@@ -9,9 +9,9 @@ services:
 
   db:
     image: mysql:5.7
+    container_name: sre-code-challenge_db_1
+    env_file: ./db/db.env
     ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: MYPASSWORD
+      - "32000:3306"
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:rw

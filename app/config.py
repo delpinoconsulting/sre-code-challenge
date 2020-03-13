@@ -1,0 +1,25 @@
+# config.py
+import mysql.connector
+from os import getenv
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+MYSQL_DATABASE_USER = 'root'
+MYSQL_DATABASE_PASSWORD = 'MYPASSWORD'
+MYSQL_DATABASE_DB = 'mydb'
+MYSQL_DATABASE_HOST = 'db'
+MYSQL_DATABASE_PORT = 3306
+assert MYSQL_DATABASE_USER
+assert MYSQL_DATABASE_PASSWORD
+assert MYSQL_DATABASE_DB
+assert MYSQL_DATABASE_HOST
+assert MYSQL_DATABASE_PORT
+
+# use the key
+print(MYSQL_DATABASE_USER)
+print(MYSQL_DATABASE_PASSWORD)
+print(MYSQL_DATABASE_DB)
+print(MYSQL_DATABASE_HOST)
+print(MYSQL_DATABASE_PORT)

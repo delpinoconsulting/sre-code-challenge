@@ -1,4 +1,7 @@
 Flask
 flask-mysql
 MySQL
+python-dotenv
+config
+mysql-connector
 
